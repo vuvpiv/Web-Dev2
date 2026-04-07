@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img class="insta-logo" src="https://images.seeklogo.com/logo-png/30/2/instagram-new-2016-logo-png_seeklogo-302599.png" height="50px">
+        <div class="left-block">
+            <h1>Посмотрите, какими моментами из жизни поделились ваши <span class="gradient">близкие друзья</span>.
+            </h1>
+            <img src="https://static.cdninstagram.com/rsrc.php/v4/yF/r/reN9rvYdLTB.png" height="500px">
+        </div>
+        <div class="right">
+            <div class="login-block">
+                
+                <h2>Войти в Instagram</h2>
+                <form>
+                <input type="text" placeholder="Имя пользователя, номер мобильного телефона или электронная почта">
+                <input type="password" placeholder="Пароль">
+                <button class="btn-login">Войти</button>
+                </form>
+                <a class="forgot" href="#">Забыли пароль?</a>
+                <div class="or"><span>ИЛИ</span></div>
+                <button class="btn-facebook" type="button">Войти через Facebook</button>
+                <p class="signup">Нет аккаунта?<a href="#">Зарегистрироваться</a></p>
+                <p class="meta">Meta</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <a href="#">Meta</a>
+        <a href="#">Meta</a>
+        <a href="#">Блог</a>
+        <a href="#">Вакансии</a>
+        <a href="#">Помощь</a>
+        <a href="#">API</a>
+        <a href="#">конфиденциальность</a>
+        <a href="#">Условия</a>
+        <a href="#">Места</a>
+        <a href="#">Instagram Life</a>
+        <a href="#">Meta AI</a>
+        <a href="#">Threads</a>
+        <a href="#">Загрузка контактов и лиц, не являющихся пользователями</a>
+        <a href="#">Meta Verified</a>
+    </footer>
+</body>
+
+const items = document.querySelectorAll(".item span");
+
+  // Проверяем, есть ли уже такой текст
+  for (let item of items) {
+    if (item.textContent === text) {
+      alert("Такая задача уже существует!");
+      return;
+    }
+  }

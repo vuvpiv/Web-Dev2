@@ -1,0 +1,16 @@
+<h1>Album #{{ albumId }} Photos</h1>
+
+@if (loading) {
+  <p class="muted">Loading photos...</p>
+} @else {
+  <div class="grid">
+    @for (p of photos; track p.id) {
+      <figure class="photo">
+        <img [src]="p.thumbnailUrl" [alt]="p.title" />
+        <figcaption>{{ p.title }}</figcaption>
+      </figure>
+    }
+  </div>
+
+  <button class="btn outline" type="button" (click)="back()">Back</button>
+}

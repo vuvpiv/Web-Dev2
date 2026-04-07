@@ -1,0 +1,75 @@
+<style>
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  @media (max-width: 1100px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 650px) {
+    .products-grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 14px;
+    background: #fff;
+    display: grid;
+    gap: 10px;
+  }
+
+  .title {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .meta {
+    opacity: 0.75;
+    font-size: 13px;
+  }
+
+  .row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  button {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+  }
+
+  button:hover { background: #f6f6f6; }
+</style>
+
+<div class="container text-center" style="margin-top: 2%;">
+  <h1>Albums</h1>
+
+  <div *ngIf="!(albums$ | async)?.length">
+    Loading albums...
+  </div>
+
+  <div class="products-grid" *ngIf="(albums$ | async) as albums">
+    <div class="card" *ngFor="let album of albums">
+      <div class="row">
+        <div class="meta">#{{ album.id }}</div>
+        <button (click)="delete(album.id)">Delete</button>
+      </div>
+
+      <a [routerLink]="['/albums', album.id]">
+        <div class="title">{{ album.title }}</div>
+      </a>
+
+      <div class="meta">User: {{ album.userId }}</div>
+    </div>
+  </div>
+</div>

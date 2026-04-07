@@ -1,0 +1,6 @@
+.muted { color: #666; }
+.label { display:block; margin-top: 10px; margin-bottom: 6px; font-weight: 600; }
+.input { width: 100%; max-width: 600px; padding: 10px 12px; border: 1px solid #ddd; border-radius: 10px; }
+.row { display:flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.btn { padding: 10px 12px; border-radius: 10px; border: 1px solid #111; background: #111; color: #fff; cursor: pointer; text-decoration: none; display:inline-flex; align-items:center; }
+.btn.outline { background: transparent; color: #111; }

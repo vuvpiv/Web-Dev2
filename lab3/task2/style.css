@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111827;
+}
+
+/* Top black bar */
+.topbar {
+  height: 56px;
+  background: #1f1f1f;
+  display: flex;
+  align-items: center;
+}
+
+.topbar-inner {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  color: #cbd5e1;
+  font-size: 18px;
+}
+
+/* Page layout */
+.page {
+  width: min(1000px, 92%);
+  margin: 48px auto;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 24px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* Input + button row */
+.controls {
+  width: min(720px, 100%);
+  margin: 0 auto 28px;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 16px;
+  align-items: center;
+}
+
+.controls input {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.controls input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
+}
+
+.controls button {
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background: #2f6fbd;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  filter: brightness(0.95);
+}
+
+/* Card with list */
+.card {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  padding: 16px 14px;
+  border-top: 1px solid #eef2f7;
+}
+
+.item:first-child {
+  border-top: none;
+}
+
+.item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  justify-self: start;
+}
+
+.item span {
+  text-align: left;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* done state */
+.item.done span {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* delete icon */
+.delete-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #ef4444;
+}
+
+.delete-btn:hover svg {
+  filter: brightness(0.9);
+}

@@ -1,0 +1,21 @@
+<article class="card">
+  <a class="img" [href]="product.link" target="_blank" rel="noopener">
+    <img [src]="product.image" [alt]="product.name" class="product-image" />
+  </a>
+
+  <h3 class="title">{{ product.name }}</h3>
+  <p class="desc">{{ product.description }}</p>
+
+  <div class="meta">
+    <span class="price">{{ product.price }} ₸</span>
+    <span class="rating">⭐ {{ product.rating }}</span>
+  </div>
+
+  <div class="actions">
+    <a class="btn" [href]="product.link" target="_blank" rel="noopener">Kaspi</a>
+
+    <a class="btn outline" [href]="telegramShareUrl" target="_blank" rel="noopener">
+  Share Telegram
+</a>
+  </div>
+</article>

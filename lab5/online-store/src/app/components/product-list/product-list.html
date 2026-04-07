@@ -1,0 +1,9 @@
+@if (visibleProducts().length === 0) {
+  <p class="empty">No products in this category</p>
+} @else {
+  <section class="grid">
+    @for (p of visibleProducts(); track p.id) {
+      <app-product-item [product]="p" (delete)="onDelete($event)"></app-product-item>
+    }
+  </section>
+}

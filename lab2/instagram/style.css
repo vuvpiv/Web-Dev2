@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fafafa;
+    color: #1c1e21;
+}
+
+
+.container {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 40px 20px;
+}
+
+
+.left-block {
+    max-width: 440px;
+    text-align: center;
+}
+
+.left-block h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+
+.gradient {
+    background: linear-gradient(to right, orange, red, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.left-block img {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+}
+
+
+.right {
+    width: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-block {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+
+.login-block img {
+    display: block;
+    margin: 6px auto 12px;
+}
+
+
+.login-block h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form input {
+    width: 100%;
+    height: 56px;
+    padding: 0 14px;
+    border-radius: 16px;
+    border: 1px solid #dbdbdb;
+    background: #fafafa;
+    font-size: 14px;
+    outline: none;
+}
+
+form input:focus {
+    background: #fff;
+    border-color: #bdbdbd;
+}
+
+
+.btn-login {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background: #8cb7ff;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: #6ea7ff;
+}
+
+
+.forgot {
+    display: block;
+    margin: 18px 0 26px;
+    text-align: center;
+    font-size: 13px;
+    color: #262626;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: #8e8e8e;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.or::before,
+.or::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #dbdbdb;
+}
+
+
+.btn-facebook {
+    width: 100%;
+    height: 48px;
+    border-radius: 25px;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    color: #385185;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.btn-facebook:hover {
+    background: #fafafa;
+}
+
+
+.signup {
+    font-size: 13px;
+    color: #262626;
+    margin-bottom: 18px;
+}
+
+.signup a {
+    color: #0095f6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+
+.meta {
+    font-size: 12px;
+    color: #8e8e8e;
+    text-align: center;
+}
+
+
+.footer {
+    border-top: 1px solid #dbdbdb;
+    padding: 20px 18px;
+    text-align: center;
+}
+
+.footer a {
+    display: inline-block;
+    margin: 6px 8px;
+    font-size: 12px;
+    color: #8e8e8e;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 900px) {
+    .left-block {
+        display: none;
+    }
+
+    .container {
+        gap: 0;
+    }
+}
+
+.insta-logo {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    height: 36px;
+}

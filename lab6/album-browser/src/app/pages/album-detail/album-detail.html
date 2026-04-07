@@ -1,0 +1,22 @@
+@if (loading) {
+  <p class="muted">Loading album...</p>
+} @else {
+  @if (!album) {
+    <p class="muted">Album not found.</p>
+  } @else {
+    <h1>Album #{{ album.id }}</h1>
+
+    <p><b>User:</b> {{ album.userId }}</p>
+
+    <label class="label">Title</label>
+    <input class="input" [value]="editedTitle" (input)="editedTitle = ($any($event.target).value)" />
+
+    <div class="row">
+      <button class="btn" type="button" (click)="save()">Save</button>
+
+      <a class="btn outline" [routerLink]="['/albums', album.id, 'photos']">View Photos</a>
+
+      <button class="btn outline" type="button" (click)="back()">Back</button>
+    </div>
+  }
+}
